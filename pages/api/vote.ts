@@ -48,7 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
             // Clicked create poll
             if ((results || voted) && buttonId === 2) {
-                return res.status(302).setHeader('Location', `${process.env['HOST']}`).send('Redirecting to create poll');
+                return res.status(302).setHeader('Location', `https://ethglobal.com`).send('Redirecting to ETHGlobal');
             }
 
             const voteExists = await kv.sismember(`poll:${pollId}:voted`, fid)
@@ -91,7 +91,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           <meta name="fc:frame:image" content="${imageUrl}">
           <meta name="fc:frame:post_url" content="${process.env['HOST']}/api/vote?id=${poll.id}&voted=true&results=${results ? 'false' : 'true'}">
           <meta name="fc:frame:button:1" content="${button1Text}">
-          <meta name="fc:frame:button:2" content="Create your poll">
+          <meta name="fc:frame:button:2" content="Apply Now!">
           <meta name="fc:frame:button:2:action" content="post_redirect">
         </head>
         <body>

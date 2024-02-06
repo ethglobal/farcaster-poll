@@ -33,6 +33,6 @@ export async function votePoll(poll: Poll, optionIndex: number) {
   redirect(`/polls/${poll.id}?results=true`);
 }
 
-export async function redirectToPolls() {
-  redirect("/polls");
+export async function redirectToHome() {
+  redirect("http://ethglobal.com");
 }
