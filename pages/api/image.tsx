@@ -55,22 +55,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 display: 'flex',
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'ffffff',
+                backgroundColor: '#ffffff',
+                color: '20294f',
                 padding: 50,
-                lineHeight: 1.2,
-                fontSize: 24,
+                lineHeight: 1,
+                fontSize: 20,
             }}>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     padding: 20,
                 }}>
-                    <h2 style={{textAlign: 'center', color: 'lightgray'}}>{poll.title}</h2>
+                    <h2 style={{textAlign: 'center', color: '#20294f'}}>{poll.title}</h2>
                     {
                         pollData.options.map((opt, index) => {
                             return (
                                 <div style={{
-                                    backgroundColor:  showResults ? '#ffffff' : '',
+                                    backgroundColor:  showResults ? '#ffffff' : '#ffffff',
                                     color: '#20294f',
                                     padding: 5,
                                     marginBottom: 5,
